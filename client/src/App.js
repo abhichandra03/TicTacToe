@@ -67,7 +67,6 @@ function App() {
           {loginShown ? <Login setIsAuth={setIsAuth} /> : ""}
           {!loginShown && !signUpShown ? (
             <div className="intro">
-              <h2>async</h2>
               <h1>tic tac toe</h1>
               <button className="regiBtn" onClick={handleSignUp}>
                 {" "}
