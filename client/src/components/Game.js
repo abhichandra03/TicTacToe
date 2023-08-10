@@ -15,7 +15,7 @@ const Game = ({ channel, setChannel }) => {
   });
 
   if (!playersJoined) {
-    return <div>Waiting for other players to join...</div>;
+    return <div className="waiting">Waiting for other players to join...</div>;
   } else {
     return (
       <div className="gameContainer">

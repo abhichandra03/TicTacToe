@@ -12,19 +12,32 @@
     flex: 0 0 33.33%;
 }
 
+
 .str-chat__main-panel{
     width: 400px;
-    padding: 5px;
-    
+    padding: 10px;
 }
+
+.str-chat__list::-webkit-scrollbar {
+    display: none
+  }
+
+@media only screen and (max-width: 768px){
+    .gameContainer{
+        flex-direction: column;
+    }
+}
+
+
 .str-chat__list {
-    background-color: lightblue;
+    background-color: #1f2833;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     padding: 5px;
     height: 500px;
     overflow: hidden;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .str-chat__list ul {
@@ -36,7 +49,7 @@
 
 .str-chat__list li {
     list-style-type: none;
-    background-color: rgb(130, 209, 240);
+    background-color: #c5c6c7;
     margin-top: 10px;
     border-radius: 6px;
     display: flex;
@@ -63,21 +76,27 @@
 
 .str-chat__message-data {
     margin-bottom: 10px;
+    color: #45a29e;
+}
+.str-chat__message-text-inner{
+    color: #1f2833;
 }
 
 .str-chat__message-data span {
     margin-left: 8px;
+    color: #45a29e;
 }
 
 .str-chat__message-data time {
     margin-left: 8px;
+    color: #45a29e;
 }
 
 .str-chat__input-flat {
     width: auto;
     height: 60px;
     padding: 5px;
-    background-color: lightgrey;
+    background-color: #1f2833;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -88,21 +107,29 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    padding: 5px;
 }
 
 .str-chat__input-flat-wrapper textarea {
-    resize: none;
-    width: 300%;
+    resize:none;
+    width: auto;
     height: 50px;
     border: none;
+    background-color: #c5c6c7;
     border-radius: 5px;
     box-shadow: 0 0 0 1px black;
     padding: 10px;
     font-size: 15px;
+    align-self: center;
 }
 .str-chat__input-flat-wrapper button{
     width: 20%;
     height: 50px;
+    background-color: #c5c6c7;
+    border-radius: 20px;
+    padding: 10px;
+    align-self: center;
+    margin-bottom: 5px;
 }
 
 .str-chat__message-simple__actions {
@@ -115,10 +142,8 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    background: #ffffff;
-    border: 1px solid #e9e9ea;
-    box-sizing: border-box;
-    border-radius: 50vw;
+    background: #c5c6c7;
+    border: none;
     padding: 6px 6px 4px 6px;
     z-index: 3;
     cursor: pointer;
@@ -132,14 +157,7 @@
     display: none;
 }
 
-.str-chat__reaction-list--reverse button {
-    margin-left: 10px;
-    border: none;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .str-chat__message-reactions-list-item {
     margin-left: 10px;
@@ -171,6 +189,11 @@ button{
 .leaveGame{
     height: 50px;
     width: 80px;
-    background-color: yellow;
-    border: 1px solid grey;
+    background-color: #66fcf1;
+    border: 1px solid #66fcf1;
+    border-radius: 10px;
+}
+.leaveGame:hover{
+    scale: 1.1;
+    transition-duration: 500ms;
 }
