@@ -8,7 +8,7 @@ import JoinGame from "./components/JoinGame";
 import { Chat } from "stream-chat-react";
 
 function App() {
-  const api_key = "ej8x3gjdzrtj";
+  const api_key = "sd4ca37t84sx";
   const cookies = new Cookies();
   const token = cookies.get("token");
   const client = StreamChat.getInstance(api_key);
@@ -67,7 +67,10 @@ function App() {
           {loginShown ? <Login setIsAuth={setIsAuth} /> : ""}
           {!loginShown && !signUpShown ? (
             <div className="intro">
-              <h1>tic tac toe</h1>
+              <h2>Multiplayer</h2>
+              <h1>Tic Tac Toe</h1>
+              <div className="buttons">
+
               <button className="regiBtn" onClick={handleSignUp}>
                 {" "}
                 Sign Up
@@ -76,6 +79,7 @@ function App() {
                 {" "}
                 Login
               </button>
+              </div>
             </div>
           ) : (
             ""
