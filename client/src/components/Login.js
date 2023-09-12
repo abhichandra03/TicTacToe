@@ -8,7 +8,7 @@ const Login = ({ setIsAuth }) => {
   const cookies = new Cookies();
 
   const login = () => {
-    Axios.post("https://tic-tac-toe-backend-sigma.vercel.app", { username, password }).then(
+    Axios.post("https://tic-tac-toe-backend-sigma.vercel.app/login", { username, password }).then(
       (res) => {
         const { token, userId, fullName, email, username } = res.data;
 

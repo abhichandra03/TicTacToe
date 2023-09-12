@@ -7,7 +7,7 @@ const SignUp = ({ setIsAuth }) => {
   const [user, setUser] = useState(null);
 
   const signUp = () => {
-    Axios.post("https://tic-tac-toe-backend-sigma.vercel.app", user).then((res) => {
+    Axios.post("https://tic-tac-toe-backend-sigma.vercel.app/signup", user).then((res) => {
       const { token, userId, fullName, email, username, hashedPassword } =
         res.data;
 
