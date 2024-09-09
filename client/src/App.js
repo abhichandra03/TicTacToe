@@ -70,6 +70,7 @@ function App() {
             <div className="intro">
               <h2>Multiplayer</h2>
               <h1>Tic Tac Toe</h1>
+             . <p>This is a two player game. Please get a friend or use incognito mode.</p>
               <div className="buttons">
 
               <button className="regiBtn" onClick={handleSignUp}>
